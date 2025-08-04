@@ -154,6 +154,7 @@ const typeColors = {
 }
 
 export default function Map() {
+  const year = new Date().getFullYear()
   const [selectedCity, setSelectedCity] = useState<string>("lisbon")
   const [selectedPlace, setSelectedPlace] = useState<Place | null>(null)
   const [selectedCategories, setSelectedCategories] = useState<string[]>([
@@ -183,14 +184,14 @@ export default function Map() {
   const filteredPlaces = currentCity?.places.filter((place) => selectedCategories.includes(place.type)) || []
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
+    <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100 flex flex-col">
       {/* Header */}
       <header className="bg-white shadow-sm border-b">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
           <div className="flex items-center justify-between">
             <div>
               <h1 className="text-2xl font-bold text-gray-900">Geotech Places</h1>
-              <p className="text-sm text-gray-600">Discover interesting places in program cities</p>
+              <p className="text-sm text-gray-600">Discover places in program cities</p>
             </div>
             <div className="flex gap-2">
               {cities.map((city) => (
@@ -209,7 +210,7 @@ export default function Map() {
       </header>
 
       {/* Main Content */}
-      <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+      <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 flex-1">
         {/* Category Filters */}
         <div className="mb-6">
           <h2 className="text-lg font-semibold text-gray-900 mb-3">Filter by Category</h2>
@@ -326,13 +327,10 @@ export default function Map() {
       </main>
 
       {/* Footer */}
-      <footer className="bg-white border-t mt-16">
+      <footer className="bg-white border-t mt-auto">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
           <div className="flex flex-col md:flex-row items-center justify-between gap-4">
-            <div className="text-center md:text-left">
-              <h3 className="text-lg font-semibold text-gray-900">Geotech Program</h3>
-              <p className="text-sm text-gray-600 mt-1">Exploring geospatial technologies across Europe</p>
-            </div>
+            <div className="text-center md:text-left"></div>
             <div className="flex gap-4">
               <Button variant="outline" size="sm" asChild>
                 <a
@@ -361,7 +359,7 @@ export default function Map() {
             </div>
           </div>
           <div className="mt-6 pt-6 border-t text-center text-sm text-gray-500">
-            <p>© 2024 Geotech Program. Discover amazing places in Lisbon, Münster, and Castellón.</p>
+            <p>© {year} Geotech Program. Discover amazing places in Lisbon, Münster, and Castellón.</p>
           </div>
         </div>
       </footer>
