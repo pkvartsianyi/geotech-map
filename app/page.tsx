@@ -153,7 +153,7 @@ const typeColors = {
   Landmark: "bg-orange-100 text-orange-800",
 }
 
-export default function GeomundusMap() {
+export default function Map() {
   const [selectedCity, setSelectedCity] = useState<string>("lisbon")
   const [selectedPlace, setSelectedPlace] = useState<Place | null>(null)
   const [selectedCategories, setSelectedCategories] = useState<string[]>([
@@ -189,7 +189,7 @@ export default function GeomundusMap() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
           <div className="flex items-center justify-between">
             <div>
-              <h1 className="text-2xl font-bold text-gray-900">Geomundus Places</h1>
+              <h1 className="text-2xl font-bold text-gray-900">Geotech Places</h1>
               <p className="text-sm text-gray-600">Discover interesting places in program cities</p>
             </div>
             <div className="flex gap-2">
@@ -330,13 +330,13 @@ export default function GeomundusMap() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
           <div className="flex flex-col md:flex-row items-center justify-between gap-4">
             <div className="text-center md:text-left">
-              <h3 className="text-lg font-semibold text-gray-900">Geomundus Program</h3>
+              <h3 className="text-lg font-semibold text-gray-900">Geotech Program</h3>
               <p className="text-sm text-gray-600 mt-1">Exploring geospatial technologies across Europe</p>
             </div>
             <div className="flex gap-4">
               <Button variant="outline" size="sm" asChild>
                 <a
-                  href="https://geomundus.org"
+                  href="https://mastergeotech.info/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center gap-2"
@@ -348,7 +348,7 @@ export default function GeomundusMap() {
               </Button>
               <Button variant="outline" size="sm" asChild>
                 <a
-                  href="https://github.com/geomundus"
+                  href="https://github.com/pkvartsianyi/geotech-map"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center gap-2"
@@ -361,7 +361,7 @@ export default function GeomundusMap() {
             </div>
           </div>
           <div className="mt-6 pt-6 border-t text-center text-sm text-gray-500">
-            <p>© 2024 Geomundus Program. Discover amazing places in Lisbon, Münster, and Castellón.</p>
+            <p>© 2024 Geotech Program. Discover amazing places in Lisbon, Münster, and Castellón.</p>
           </div>
         </div>
       </footer>

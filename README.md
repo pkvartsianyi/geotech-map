@@ -1,1 +1,1 @@
-# geomundus-map
+# geotech-map
